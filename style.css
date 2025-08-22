@@ -1,0 +1,124 @@
+body{
+    background: rgb(163, 143, 143);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:  rgb(114, 98, 98);
+    font-style:normal;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+#panel{
+    background: white;
+    border-radius: 8px;
+    width: 500px;
+    height: 800px;
+    margin: 5% auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#task{
+    border: 3px solid rgb(163, 143, 143);
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 20px;    
+    padding-left: 10px;
+    color:  rgb(114, 98, 98);
+}
+
+button.add{
+    background-color: rgb(158, 55, 55);
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    
+}
+
+button.add:hover{
+    background-color: rgb(90, 29, 29);
+    
+}
+
+
+button.remove {
+    background-color: rgb(87, 90, 238);
+    width: 70px;
+    height: 30px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    color: white;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+button.remove:hover {
+    background-color: rgb(34, 33, 105);
+}
+
+button.edit {
+    background-color: rgb(56, 54, 59);
+    width: 70px;
+    height: 30px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    color: white;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+button.edit:hover {
+    background-color: rgb(34, 33, 105);
+}
+
+button.clear {
+    background-color: rgb(87, 90, 238);
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button.clear:hover {
+    background-color: rgb(34, 33, 105);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 0;
+}
+
+ul li{
+    list-style: none;
+    border: 2px solid rgba(114, 98, 98, 0.4);
+    border-radius: 10px;
+    font-size: 18px;
+    align-content: center;
+    width: 400px;
+    height: 50px;
+    background: rgba(163, 143, 143, 0.3);;
+
+}
