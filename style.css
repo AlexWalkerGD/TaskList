@@ -61,12 +61,15 @@ button.add:hover{
 
 
 button.remove {
-    background-color: rgb(87, 90, 238);
-    width: 62px;
-    height: 25px;
+    background-color: rgb(89, 89, 100);
+    width: 27px;
+    height: 27px;
     padding: 5px 5px;
     border: none;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin-left: 5px;
     color: white;
@@ -75,7 +78,33 @@ button.remove {
 }
 
 button.remove:hover {
-    background-color: rgb(34, 33, 105);
+    background-color: rgb(48, 48, 49);
+}
+
+.div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-check{
+    appearance: none;
+    width: 27px;
+    height: 27px;
+    border: 2px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-check:checked::after {
+    content: "✔";
+    color: rgb(0, 165, 69);
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 4px;
 }
 
 button.edit {
@@ -130,7 +159,8 @@ ul {
 ul li{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 10px 0;
     width: 250px;
     min-height: 35px;
     background: rgba(163, 143, 143, 0.3);
@@ -191,8 +221,8 @@ ul li{
     }
 
     button.remove {
-    width: 70px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: 13px;
     }
 
@@ -201,4 +231,15 @@ ul li{
     height: 30px;
     font-size: 13px;
     }
+
+    .task-check{
+    width: 35px;
+    height: 35px;
+    }
+
+    .task-check:checked::after {
+    font-size: 26px;
+    left: 5px;
+    }
 }
+

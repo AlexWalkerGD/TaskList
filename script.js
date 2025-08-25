@@ -33,18 +33,29 @@ function refreshTasks(){
             let newTask = document.createElement("li");
             newTask.textContent = tasks[i];
 
+            let div = document.createElement("div");
+            div.className = "div";  
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.className = "task-check";   
+
             let buttonRemove = document.createElement("button");
             buttonRemove.className = "remove";
-            buttonRemove.textContent = "Remove";
             buttonRemove.onclick = () => removeTask(i);
 
-            let buttonEdit = document.createElement("button");
+            let trash = document.createElement("i");
+            trash.classList.add("fas", "fa-trash", "trash");
+
+           /* let buttonEdit = document.createElement("button");
             buttonEdit.className = "edit";
             buttonEdit.textContent = "Edit";
-            buttonEdit.onclick = () => editTask(i);
+            buttonEdit.onclick = () => editTask(i);*/
 
-            newTask.appendChild(buttonRemove);
-            newTask.appendChild(buttonEdit);
+            buttonRemove.appendChild(trash);
+            div.appendChild(checkbox);
+            div.appendChild(buttonRemove);
+            newTask.appendChild(div);
             taskList.appendChild(newTask);
         }
         
