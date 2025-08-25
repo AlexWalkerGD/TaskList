@@ -65,8 +65,15 @@ function editTask(i){
 }
 
 function clearList(){
-    tasks.length = 0;
-    refreshTasks();
-    let message = document.getElementById("message");
-    message.textContent = "Task list successfully cleaned";
+    if(tasks.length !== 0){
+        tasks.length = 0;
+        refreshTasks();
+        let message = document.getElementById("message");
+        message.textContent = "Task list successfully cleaned";
+    }
+    else{
+        let errorMessage = "Enter a task to clear the list";
+        document.getElementById("message").textContent = errorMessage;
+    }
+    
 }
