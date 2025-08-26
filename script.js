@@ -17,7 +17,7 @@ function addtask(){
         document.getElementById("message").textContent = message;
         
         tasks.push(task);  
-        refreshTasks();  
+        refreshTasks();
     }
 
     inputTask.value = "";
@@ -56,7 +56,13 @@ function refreshTasks(){
             div.appendChild(checkbox);
             div.appendChild(buttonRemove);
             newTask.appendChild(div);
-            taskList.appendChild(newTask);
+            taskList.appendChild(newTask); 
+            if(tasks.length !== 0){
+                createKey('data', tasks);                
+            }  
+            else{
+                deleteKey('data')
+            }       
         }
         
 }
@@ -81,10 +87,19 @@ function clearList(){
         refreshTasks();
         let message = document.getElementById("message");
         message.textContent = "Task list successfully cleaned";
+        deleteKey('data')
     }
     else{
         let errorMessage = "Enter a task to clear the list";
         document.getElementById("message").textContent = errorMessage;
     }
     
+}
+
+function createKey(key, object){
+    localStorage.setItem(key, JSON.stringify(object));
+}
+
+function deleteKey(key){
+    localStorage.removeItem(key);
 }
